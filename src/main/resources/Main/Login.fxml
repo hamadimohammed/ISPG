@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="475.0" prefWidth="521.0" styleClass="body" stylesheets="@../CssPack/Login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="166.0" layoutY="14.0" prefHeight="394.0" prefWidth="331.0" spacing="10.0" styleClass="box" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" smooth="false">
+               <image>
+                  <Image url="@../Assets/ISPG.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../Assets/user_male_40px.png" />
+                     </image>
+                  </ImageView>
+                  <TextField promptText="Utilisateur" styleClass="input">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../Assets/password_40px.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField promptText="mot de pass" styleClass="input">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <ToggleButton mnemonicParsing="false" styleClass="button" text="Connecte" textFill="WHITE" />
+            <Text accessibleRole="BUTTON" fill="#282a2f" styleClass="text" text="Rénitialiser le mot de pass">
+               <font>
+                  <Font name="MT Extra" size="20.0" />
+               </font></Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
