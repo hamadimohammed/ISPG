@@ -1,0 +1,57 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.btns{
+	-fx-background-color: transparent ;
+}
+.btns:hover{
+	-fx-background-color: #1F8FE8 ;
+}
+.btns:focused{
+	-fx-background-color: #1F8FE8 ;
+}
+.simple_field{
+    -fx-background-color: transparent ;
+    -fx-border-color: blue ;
+    -fx-border-radius: 5;
+}
+.insert_field{
+    -fx-background-color: #E1E9EB ;
+    -fx-font-size:18;
+}
+.table{
+	-fx-background-color: white  ;
+	-fx-background-radius: 0px 0px 10px 10px;
+	-fx-border-color: black ;
+	-fx-border-width: 1;
+	-fx-border-radius: 0px 0px 10px 10px;
+}
+.fields{
+	-fx-background-color: transparent ;
+	-fx-border-color: white ;
+	-fx-border-width: 0px 0px 2px 0px;
+}
+.body{
+    -fx-background-color: #eef5f9
+}
+.dialog:hover{
+	-fx-border-color: blue ;
+	-fx-border-radius: 15;
+	-fx-background-color: #4285F4;
+	-fx-background-radius: 15;
+	-fx-border-color: #C430A0;
+}
+.combo_box{
+	-fx-background-color: transparent ;
+}
+.combo_box:focused{
+	-fx-border-color: blue  ;
+}
+.table-row-cell:empty{
+	-fx-background-color:white ;
+	-fx-border-width: 0px;
+}
+.card_paper{
+	-fx-background-radius: 8px;
+	-fx-border-color: black;
+	-fx-border-radius: 8px;
+	-fx-padding: 3px;
+}

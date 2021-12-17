@@ -11,8 +11,9 @@ import java.io.IOException;
 public class MainWindow {
 	private static Stage stage;
 	public static BorderPane borderPane = new BorderPane();
-
+	public static ObservePrimaryStage observe_primary_stage;
 	public MainWindow(Stage primaryStage) throws IOException {
+		observe_primary_stage = new ObservePrimaryStage();
 		stage = primaryStage;
 		Parent root = FXMLLoader.load(getClass().getResource("/Main/Login.fxml"));
 		Scene scene = new Scene(root);
@@ -22,10 +23,10 @@ public class MainWindow {
 		stage.show();
 	}
 	public static void relance_login() throws IOException {
-		//Platform.setImplicitExit(false);
+		observe_primary_stage.notifyObservateur();
 		stage.close();
 		stage = new Stage();
-		Parent root = FXMLLoader.load(MainWindow.class.getResource("/user/Login.fxml"));
+		Parent root = FXMLLoader.load(MainWindow.class.getResource("/Main/Login.fxml"));
 		Scene scene = new Scene(root);
 		stage.setMaximized(false);
 		stage.setAlwaysOnTop(true);
@@ -34,20 +35,21 @@ public class MainWindow {
 	}
 	/*public static AnchorPane getPane() {
 		return pane;
-	}
-	public static void setMain(Login_Model connection) throws IOException {
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MainWindow.class.getResource("/application/MainMenu.fxml"));
-		borderPane = loader.load();
-		Menu controller = (Menu)loader.getController();
-		controller.set_connection(connection);
-		stage.setMaximized(true);
-		stage.setAlwaysOnTop(false);
-		Scene scene = new Scene(borderPane);
-		stage.setScene(scene);
-		stage.show();
-		setPaneFragment("/application/Gestion.fxml");
 	}*/
+	public static void setMain(){
+		FXMLLoader loader = new FXMLLoader();
+		try {
+			loader.setLocation(MainWindow.class.getResource("/Gestion/Menu.fxml"));
+			borderPane = loader.load();
+			stage.setMaximized(true);
+			stage.setAlwaysOnTop(false);
+			Scene scene = new Scene(borderPane);
+			stage.setScene(scene);
+			stage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	public static void setPaneFragment(String url) throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MainWindow.class.getResource(url));

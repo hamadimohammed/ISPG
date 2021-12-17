@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#events" prefHeight="500.0" prefWidth="800.0" stylesheets="@../CssPack/app.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Client.ClientsController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="800.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="780.0" spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <ToggleButton mnemonicParsing="false" onAction="#insert" styleClass="btns" text="Ajouter" textFill="#46ab20">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/add_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </ToggleButton>
+                        <ToggleButton fx:id="update_btn" mnemonicParsing="false" onAction="#update" styleClass="btns" text="Sauvegarder" textFill="#2820ab">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/save_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" onAction="#delete" styleClass="btns" text="Supprimer" textFill="#ab2056">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/delete_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="simple_field" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assets/search_64px.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="search_field" onAction="#search" prefHeight="36.0" prefWidth="198.0" promptText="Recherche par code ou client" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font></TextField>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <ScrollPane fitToHeight="true" hbarPolicy="ALWAYS" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+               <content>
+                  <TableView fx:id="clients_table" editable="true" styleClass="table" tableMenuButtonVisible="true">
+                    <columns>
+                        <TableColumn fx:id="id_column" maxWidth="2500.0" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="nom_column" maxWidth="7000.0" prefWidth="200.0" text="Nom prenom" />
+                        <TableColumn fx:id="solde_column" maxWidth="4000.0" prefWidth="100.0" text="Solde" />
+                        <TableColumn fx:id="nrc_column" maxWidth="6000.0" prefWidth="150.0" text="N° RC" />
+                        <TableColumn fx:id="nis_column" prefWidth="150.0" text="NIS" />
+                        <TableColumn fx:id="ai_column" prefWidth="150.0" text="AI" />
+                        <TableColumn fx:id="mf_column" prefWidth="150.0" text="MF" />
+                        <TableColumn fx:id="phone_column" prefWidth="130.0" text="Telephone" />
+                        <TableColumn fx:id="addresse_column" prefWidth="250.0" text="Addresse" />
+                        <TableColumn fx:id="date_column" prefWidth="120.0" text="Date Creation" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

@@ -1,11 +1,9 @@
 package Model.Personne.Intervenant;
 
-public class ExternePersonne extends Personne{
-    private double solde;
+import Model.Personne.Personne;
 
-    public ExternePersonne() {
-        super();
-    }
+public class ExternePersonne extends Personne {
+    private double solde;
 
     public double getSolde() {
         return solde;

@@ -1,0 +1,48 @@
+package Model.Article;
+
+public class Categorie {
+    private int id;
+    private String libelle;
+    private String type;
+
+    public Categorie(int id, String libelle, String type) {
+        this.id = id;
+        this.libelle = libelle;
+        this.type = type;
+    }
+    public Categorie(String type) {
+        this.type=type;
+    }
+    public Categorie() {
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return libelle;
+    }
+}

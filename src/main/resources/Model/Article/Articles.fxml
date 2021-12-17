@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Article.ArticlesController">
+   <children>
+      <HBox prefHeight="485.0" prefWidth="587.0" stylesheets="@../../CssPack/app.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane minWidth="350.0" prefHeight="500.0" prefWidth="500.0" styleClass="body">
+               <children>
+                  <VBox layoutX="10.0" layoutY="10.0" onKeyPressed="#events" prefHeight="463.0" prefWidth="402.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <ToggleButton mnemonicParsing="false" onAction="#insert" styleClass="btns">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/add_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="save_btn" mnemonicParsing="false" onAction="#update" styleClass="btns">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/save_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="delete_btn" mnemonicParsing="false" onAction="#delete" styleClass="btns">
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/delete_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <HBox alignment="CENTER_LEFT" spacing="5.0" styleClass="simple_field" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Assets/search_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="search_field" promptText="Rechercher par designation" style="-fx-background-color: tranparent;" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="4.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="article_table" editable="true" minHeight="-Infinity" minWidth="-Infinity" styleClass="table" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="id_column" maxWidth="1200.0" prefWidth="50.0" text="ID" />
+                              <TableColumn fx:id="design_column" maxWidth="4500.0" prefWidth="156.0" text="Designation" />
+                           </columns>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label text="NBR DES ARTICLES :">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nbr_articles">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <ScrollPane fitToHeight="true" HBox.hgrow="ALWAYS">
+               <content>
+                  <HBox fx:id="scroll_hbox" fillHeight="false" prefHeight="100.0" prefWidth="200.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

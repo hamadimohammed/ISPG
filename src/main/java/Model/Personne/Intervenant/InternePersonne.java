@@ -1,11 +1,13 @@
 package Model.Personne.Intervenant;
 
-public class InternePersonne extends Personne{
-    private String password,username ;
+import Model.Personne.Personne;
 
-    public InternePersonne() {
-        super();
-    }
+import java.util.ArrayList;
+
+public class InternePersonne extends Personne {
+    private String password,username ;
+    private ArrayList<String> accees;
+
 
     public String getPassword() {
         return password;
@@ -21,5 +23,13 @@ public class InternePersonne extends Personne{
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public ArrayList<String> getAccees() {
+        return accees;
+    }
+
+    public void setAccees(ArrayList<String> accees) {
+        this.accees = accees;
     }
 }

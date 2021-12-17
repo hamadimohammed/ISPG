@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="439.0" prefWidth="571.0" stylesheets="@../CssPack/pop_window.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Client.ClientInsert">
+   <children>
+      <BorderPane prefHeight="439.0" prefWidth="544.0" styleClass="body" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="397.0" prefWidth="537.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox>
+                     <children>
+                        <VBox prefHeight="217.0" prefWidth="557.0" spacing="4.0">
+                           <children>
+                              <HBox prefHeight="64.0" prefWidth="535.0" spacing="8.0">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label lineSpacing="1.0" text="Nom complet" textFill="#6f6262">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="nom_prenomField" prefHeight="39.0" prefWidth="262.0" promptText="Saisis le nom et prenom" styleClass="text_field" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="64.0" prefWidth="258.0">
+                                       <children>
+                                          <Label lineSpacing="1.0" text="Telephone">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="phoneField" prefHeight="25.0" prefWidth="159.0" promptText="Saisis que les nombres" styleClass="text_field" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox>
+                                 <children>
+                                    <Label lineSpacing="1.0" prefHeight="67.0" prefWidth="83.0" text="Address">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="addField" prefHeight="72.0" prefWidth="227.0" promptText="Saisir l'addresse" styleClass="text_field" />
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label lineSpacing="1.0" text="Solde">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="soldeField" promptText="Saisis le solde du client" styleClass="text_field" text="0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <DialogPane style="-fx-border-color: black; -fx-border-radius: 5;">
+                           <content>
+                              <HBox>
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="98.0" prefWidth="76.0" spacing="35.0">
+                                       <children>
+                                          <Label lineSpacing="1.0" text="N°RC">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label lineSpacing="1.0" text="M F">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="20.0">
+                                       <children>
+                                          <TextField fx:id="nrc_field" focusTraversable="false" promptText="Saisis n rc" styleClass="text_field" />
+                                          <TextField fx:id="mf_field" promptText="Saisis mf" styleClass="text_field" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="98.0" prefWidth="60.0" spacing="35.0">
+                                       <children>
+                                          <Label lineSpacing="1.0" text="AI">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label lineSpacing="1.0" text="NIS">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="20.0">
+                                       <children>
+                                          <TextField fx:id="ai_field1" prefHeight="25.0" prefWidth="159.0" promptText="Saisis ai" styleClass="text_field" />
+                                          <TextField fx:id="nis_field1" promptText="Saisis le nis" styleClass="text_field" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </DialogPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <bottom>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="571.0" spacing="5.0" styleClass="bottom_bar">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                     <children>
+                        <ToggleButton mnemonicParsing="false" onAction="#save" styleClass="btns" text="Sauvegarder">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/save_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" onAction="#reset" styleClass="btns" text="Rénitialiser">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/reset_26px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" onAction="#cancel" styleClass="btns" text="Fermer">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Assets/cancel_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </ToggleButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

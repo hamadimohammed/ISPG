@@ -1,0 +1,24 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.btns{
+	-fx-background-color: transparent ;
+}
+.btns:hover{
+	-fx-background-color: #1F8FE8 ;
+}
+.btns:focused{
+	-fx-background-color: #1F8FE8 ;
+}
+.text_field{
+    -fx-background-color: #E1E9EB ;
+    -fx-font-size:18;
+}
+.label{
+    -fx-text-fill : #6f6262;
+}
+.body{
+    -fx-background-color: #F5F5F5
+}
+.bottom_bar{
+    -fx-background-color: #F0F0F2;
+    -fx-font-size:18;
+}

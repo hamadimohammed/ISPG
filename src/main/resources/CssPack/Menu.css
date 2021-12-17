@@ -1,0 +1,30 @@
+.log_out{
+	-fx-background-color: transparent;
+}
+.log_out:hover{
+	-fx-background-color: orange;
+	-fx-background-radius: 45px 45px 45px 45px;
+}
+.btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 4px ;
+    -fx-text-fill:#607d8b;
+    -fx-font-size:18;
+    -fx-font-weight:'BOLD';
+
+}
+#menu_item{
+	-fx-background-color: transparent;
+	-fx-background-radius: 4px ;
+	-fx-text-fill:#607d8b;
+    -fx-font-size:18;
+}
+#menu_item:hover{
+	-fx-background-color: #26c6da;
+    -fx-text-fill: white;
+}
+.side_bar{
+	-fx-background-color: white;
+	-fx-border-color: black;
+	-fx-border-width: 0 1 0 0;
+}
